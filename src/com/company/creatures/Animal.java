@@ -1,8 +1,9 @@
 package com.company.creatures;
 
+import javax.swing.*;
 import java.io.File;
 
-public class Animal {
+public class Animal implements Edible, Soldable  {
 
     public final String species;
     protected Double weight;
@@ -54,6 +55,36 @@ public class Animal {
         else
         {
             System.out.println("Thx for cardio bro my weight is now " + weight);
+        }
+    }
+
+    @Override
+    public void beEaten() {
+        if (this instanceof Human) {
+            try {
+                throw new Exception("No way");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        } else {
+            this.weight = 0.0;
+        }
+
+
+    }
+
+    @Override
+    public void beSold() {
+        if (this instanceof Human) {
+            try {
+                throw new Exception("You cant sell people");
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }else{
+            System.out.println("Udało się sprzedać");
         }
     }
 }

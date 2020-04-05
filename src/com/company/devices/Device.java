@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Device{
+public abstract class Device implements Soldable{
 public final String marka;
 public final String model;
 public final Integer yearOfProduction;
@@ -12,5 +12,10 @@ public final Double cena;
         this.model = model;
         this.yearOfProduction = yearOfProduction;
         this.cena = cena;
+    }
+    abstract void turnOn();
+
+    @Override
+    public void beSold(){
     }
 }

@@ -3,6 +3,7 @@ package com.company;
 import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import com.company.devices.Car;
+import com.company.devices.Device;
 
 public class Main {
 
@@ -34,8 +35,8 @@ public class Main {
         zona.getCar();
         System.out.println(me.species);
 
-        me.feed();
 
+        me.beSold();
 
 
 //        dog.feed();

@@ -22,4 +22,14 @@ public class Car extends Device {
     public String toString(){
         return marka+ " "+model+" "+yearOfProduction;
     }
+
+    @Override
+    void turnOn() {
+
+    }
+
+
+    public void beSold(){
+        System.out.println("Udało się sprzedać");
+    }
 }
