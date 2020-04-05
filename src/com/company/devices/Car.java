@@ -7,9 +7,9 @@ public class Car extends Device {
         public final String kolor;
 
 
-        public Car(String marka, String model, Integer yearOfProduction, String kolor, Double cena) {
+        public Car(String marka, String model, Integer yearOfProduction, String kolor, Double value) {
 
-            super(marka, model, yearOfProduction, cena);
+            super(marka, model, yearOfProduction, value);
 
             this.kolor = kolor;
 
