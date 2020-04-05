@@ -3,7 +3,7 @@ package com.company.creatures;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
-public class Human {
+public class Human extends Animal {
 
     public String firstName;
     public String lastName;
@@ -14,13 +14,18 @@ public class Human {
 
     private Double salary;
 
+    public final static Double DEFAULT_HUMAN_WIGHT = 70.0;
+    public Human() {
+        super("homo sapiens");
+    }
+
     public void shareCar(Car dzielony){
         car=dzielony;
     }
 
     public void setCar(Car car) {
         if(salary*3>car.cena) {
-            System.out.println("Samochód gupiony za gotówke");
+            System.out.println("Samochód kupiony za gotówke");
             this.car = car;
         }
         else if(salary*12>car.cena){
@@ -28,7 +33,7 @@ public class Human {
             this.car = car;
         }
         else{
-            System.out.println("Na samochód cię nie stać cię biedaku");
+            System.out.println("Na samochód cię nie stać biedaku");
         }
     }
 
@@ -44,4 +49,6 @@ public class Human {
     public Double getSalary() {
         return salary;
     }
+    public String toString(){
+        return this.firstName +""+ this.lastName; }
 }

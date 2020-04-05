@@ -4,8 +4,8 @@ import java.io.File;
 
 public class Animal {
 
-    final String species;
-    private Double weight;
+    public final String species;
+    protected Double weight;
     public String name;
     File pic;
 

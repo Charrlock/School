@@ -9,8 +9,8 @@ public class Main {
     public static void main(String[] args) {
 
         Human me = new Human();
-        me.firstName = "Kacper";
-        me.lastName = "Warda";
+        me.firstName = "Mikołaj";
+        me.lastName = "Majkowski";
         me.pet = new Animal("mouse");
         me.pet.name = "Myszojeleń";
         me.pet.feed();
@@ -32,6 +32,12 @@ public class Main {
         zona.shareCar(fura);
         System.out.println("A samochód żony to: " );
         zona.getCar();
+        System.out.println(me.species);
+
+        me.feed();
+
+
+
 //        dog.feed();
 //        dog.feed();
 //        dog.feed();
